@@ -32,6 +32,6 @@ var clique = 1;
             window.document.getElementById('bloco4').innerText='Mova o mouse aqui dentro!';
         }
 
-        function reset(){
+        function refresh(){
             location.reload()
         }

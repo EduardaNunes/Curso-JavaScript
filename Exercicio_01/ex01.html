@@ -13,26 +13,31 @@
 </header>
 <main>
 
-    <div onmouseenter="entrou()" onmouseleave="saiu()" class="bloco">
-        <p id="bloco1">Vem aqui!</p>
+    <div class="row">
+        <div onmouseenter="entrou()" onmouseleave="saiu()" class="bloco">
+            <p id="bloco1">Vem aqui!</p>
+        </div>
+
+        <div  onclick="clicou()" class="bloco">
+            <p id="bloco2">Clique em mim!</p>
+        </div>
+
+        <div onmousedown="segurou()" onmouseup="soltou()" class="bloco">
+            <p id="bloco3">Agora, tente segurar o clique</p>
+        </div>
+
+        <div onmousemove="moveu()" onmouseleave="saiu2()" class="bloco">
+            <p id="bloco4">Mova o mouse aqui dentro!</p>
+        </div>
     </div>
 
-    <div  onclick="clicou()" class="bloco">
-        <p id="bloco2">Clique em mim!</p>
-    </div>
-
-    <div onmousedown="segurou()" onmouseup="soltou()" class="bloco">
-        <p id="bloco3">Agora, tente segurar o clique</p>
-    </div>
-
-    <div onmousemove="moveu()" onmouseleave="saiu2()" class="bloco">
-        <p id="bloco4">Mova o mouse aqui dentro!</p>
+    <div>
+        <div class="bloco refresh" onclick="refresh()">
+            <p>Clique aqui para recomeçar!</p>
+        </div>
     </div>
 
 </main>
-<footer>
-    <div></div>
-</footer>
     <script src="ex01.js"></script>
 </body>
 </html>
