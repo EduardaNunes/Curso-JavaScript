@@ -9,4 +9,4 @@
 ---
 ### Exercício 2
 
-<p align="justify">Em breve...</p>
+<p align="justify">Em breve!</p>
