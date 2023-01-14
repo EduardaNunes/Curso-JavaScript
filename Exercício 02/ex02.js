@@ -51,7 +51,7 @@ function play_x3(){
     for (var i = 0, max = btn.length; i < max; i++) {
         btn[i].style.background='var(--cor_btn)';
     }
-    
+
     btn_x3.style.background='var(--cor_btn_hover)';
 
     clearInterval(clock);
@@ -88,9 +88,24 @@ function tempo(){
     relogio.innerText=formato_relogio; 
     }
 
-    function oi(){
+    function conferir_hora(){
 
+        let ceu = window.document.querySelector('.ceu');
+
+        if (hh>=6 && hh<=12){
+
+            ceu.style.background='var(--cor_ceu_dia)';
+
+        } else if (hh>=12 && hh<=18){
+
+            ceu.style.background='var(--cor_ceu_tarde)';
+
+        }else{
+            ceu.style.background='var(--cor_ceu_noite)';
+        }
     }
+
+    setInterval(conferir_hora,1);
 
 
 

@@ -10,15 +10,34 @@
     --cor_body: 206, 193, 176;
     --cor_h1:#fff;
     --cor_h2:#e76f51;
-    --cor_ceu:#73d2de;
-    --cor_areia:#f4a261;
-    --cor_piramide_esquerda:#fefae0;
-    --cor_piramide_direita:#fefae0;
-    --cor_sol:#fcca46;
-    --cor_lua:rgb(190, 190, 190);
-    --cor_sombra:#e76f51;
     --cor_btn:#e76f51;
     --cor_btn_hover:#b45841;
+
+    --cor_ceu_dia:#73d2de;
+    --cor_ceu_tarde:#deb073;
+    --cor_ceu_noite:#00233a;
+
+    --cor_areia_dia:#f4a261;
+    --cor_areia_tarde:#f4a261;
+    --cor_areia_noite:#f4a261;
+
+    --cor_sombra_dia:#e76f51;
+    --cor_sombra_tarde:#e76f51;
+    --cor_sombra_noite:#e76f51;
+
+    --cor_piramide_esquerda_dia:#fefae0;
+    --cor_piramide_esquerda_tarde:#fefae0;
+    --cor_piramide_esquerda_noite:#fefae0;
+
+    --cor_piramide_direita_dia:#fefae0;
+    --cor_piramide_direita_tarde:#fefae0;
+    --cor_piramide_direita_noite:#fefae0;
+
+    --cor_sol:#fcca46;
+    --cor_raios_sol:rgba(227, 100, 20, 0.4);
+
+    --cor_lua:rgb(190, 190, 190);
+    --cor_raios_lua:rgba(199, 199, 199, 0.4);
 
 }
 
@@ -80,14 +99,13 @@ h2{
 .ceu {
 	z-index: 1;
 	position: relative;
-	background-color: var(--cor_ceu);
+	background-color: var(--cor_ceu_dia);
 	height: 200px;
 	width: 200px;
 	border-radius: 100px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	animation: fadeout 4s ease-in-out infinite;
 }
 
 .borda {
@@ -105,7 +123,7 @@ h2{
 .areia {
 	z-index: -1;
 	position: absolute;
-	background-color: var(--cor_areia);
+	background-color: var(--cor_areia_dia);
 	height: 100px;
 	width: 200px;
 	border-radius: 0 0 100px 100px;
@@ -116,11 +134,11 @@ h2{
 	position: absolute;
 	width: 110px;
 	height: 110px;
-	background-color:var(--cor_piramide_esquerda);
+	background-color:var(--cor_piramide_esquerda_dia);
     clip-path: polygon(50% 40%,0% 100%,65% 100%);
 	box-sizing: border-box;
 	margin-bottom: 50px;
-	animation: piramide_esquerda 400s ease-in-out infinite;
+	animation: piramide_esquerda 10s ease-in-out infinite;
 }
 
 .piramide_direita {
@@ -128,10 +146,10 @@ h2{
 	position: absolute;
 	width: 110px;
 	height: 110px;
-	background-color: var(--cor_piramide_direita);
+	background-color: var(--cor_piramide_direita_dia);
     clip-path: polygon(50% 40%,0% 100%,100% 100%);
 	margin-bottom: 50px;
-	animation: piramide_direita 400s ease-in-out infinite;
+	animation: piramide_direita 10s ease-in-out infinite;
 }
 
 .sol {
@@ -142,18 +160,30 @@ h2{
 	height: 35px;
 	border-radius: 50%;
 	margin: 60px 0px 0px 0px;
-	animation: circular 400s ease-in-out infinite;
-	box-shadow: 2px 2px 20px 0 rgba(227, 100, 20, 0.4);
+	animation: circular 10s ease-in-out infinite;
+	box-shadow: 2px 2px 20px 0 var(--cor_raios_sol);
+}
+
+.lua {
+	position: absolute;
+	z-index: 2;
+	background-color:var(--cor_lua);
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	margin: 60px 0px 0px 0px;
+	animation: circular 10s ease-in-out infinite;
+	box-shadow: 2px 2px 20px 0 var(--cor_raios_lua);
 }
 
 .sombra {
 	width: 220px;
 	height: 110px;
-	background-color: var(--cor_sombra);
+	background-color: var(--cor_sombra_dia);
     clip-path: polygon(50% 40%,0% 0%,100% 0%);
 	margin-top: 170px;
 	margin-left: 0px;
-	animation: sombra 400s linear infinite;
+	animation: sombra 10s linear infinite;
 }
 
 footer{
