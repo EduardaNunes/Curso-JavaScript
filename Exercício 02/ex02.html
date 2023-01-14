@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 02 - Curso em Vídeo - JavaScript</title>
+    <link href='https://css.gg/play-button.css' rel='stylesheet'>
+    <link href='https://css.gg/play-pause.css' rel='stylesheet'>
+    <link href='https://css.gg/play-track-next.css' rel='stylesheet'>
+    <link href='https://css.gg/play-forwards.css' rel='stylesheet'>
+    <link rel="stylesheet" href="ex02.css">
+</head>
+<body>
+
+    <header>
+        <h1>Horário do Dia</h1>
+    </header>
+
+    <section class="center">
+        <div class="texto_horas">
+            <h2>00 : 00 : 00</h2>
+        </div>
+        <div class="ceu">
+            <div class="borda"></div>
+            <div class="areia"></div>
+            <div class="piramide_esquerda"></div>
+            <div class="piramide_direita"></div>
+            <div class="sol"></div>
+            <div class="sombra"></div>
+        </div>
+        <div class="botoes">
+            <button onclick="pause()" class="btn btn_pause"><i class="gg-play-pause"></i></button>
+            <button onclick="play()" class="btn btn_play"><i class="gg-play-button"></i></button>
+            <button onclick="play_x2()" class="btn btn_x2"><i class="gg-play-track-next"></i></button>
+            <button onclick="play_x3()" class="btn btn_x3"><i class="gg-play-forwards"></i></button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; Duda Nunes</p>
+    </footer>
+
+    <script src="ex02.js"></script>
+</body>
+</html>
