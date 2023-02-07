@@ -5,36 +5,20 @@ var colors = document.querySelectorAll('.color')
 var color = ''
 
 paint();
-size3();
+size(3);
 
-function size3(){
-      canvas.innerHTML=''
-      for (var i=0; i<9; i++){
-          canvas.innerHTML+='<div class="pixel-paint"></div>'
-      }
-      canvas.style.cssText+="width:32vh; height:32vh; grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,1fr);" 
-      pixel = document.querySelectorAll('.pixel-paint')
-      paint()
-}
+function size(btnId){
+    let x = btnId;
+    let w = 11 * btnId -1;
+    let totalPixels = btnId * btnId;
 
-function size4(){
-    canvas.innerHTML=''
-    for (var i=0; i<16; i++){
+     canvas.innerHTML=''
+    for (var i=0; i<totalPixels; i++){
         canvas.innerHTML+='<div class="pixel-paint"></div>'
     }
-    canvas.style.cssText+="width:43vh; height:43vh; grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(4,1fr);"
+    canvas.style.cssText+='width:'+w+'vh; height:'+w+'vh; grid-template-columns:repeat('+x+',1fr);grid-template-rows:repeat('+x+',1fr);'
     pixel = document.querySelectorAll('.pixel-paint')
-    paint()
-}
-
-function size5(){
-    canvas.innerHTML=''
-    for (var i=0; i<25; i++){
-        canvas.innerHTML+='<div class="pixel-paint"></div>'
-    }
-    canvas.style.cssText+="width:54vh; height:54vh; grid-template-columns:repeat(5,1fr);grid-template-rows:repeat(5,1fr);"
-    pixel = document.querySelectorAll('.pixel-paint')
-    paint()
+    paint() 
 }
 
 function paint(){
@@ -52,7 +36,6 @@ function paint(){
     }
 
     function pixelPaint(){
-        console.log(pixel)
         this.style.background = color;
     }
 }
