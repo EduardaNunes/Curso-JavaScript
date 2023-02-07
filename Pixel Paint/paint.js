@@ -5,19 +5,16 @@ var colors = document.querySelectorAll('.color')
 var color = ''
 
 paint();
+size3();
 
 function size3(){
-    canvas.innerHTML=''
-    for (var i=0; i<9; i++){
-        canvas.innerHTML+='<div class="pixel-paint"></div>'
-    }
-    canvas.style.width='32vh'
-    canvas.style.height='32vh'
-    canvas.style.gridTemplateColumns='repeat(3,1fr)'
-    canvas.style.gridTemplateRows='repeat(3,1fr)'
-    
-    pixel = document.querySelectorAll('.pixel-paint')
-    paint()
+      canvas.innerHTML=''
+      for (var i=0; i<9; i++){
+          canvas.innerHTML+='<div class="pixel-paint"></div>'
+      }
+      canvas.style.cssText+="width:32vh; height:32vh; grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,1fr);" 
+      pixel = document.querySelectorAll('.pixel-paint')
+      paint()
 }
 
 function size4(){
@@ -25,11 +22,7 @@ function size4(){
     for (var i=0; i<16; i++){
         canvas.innerHTML+='<div class="pixel-paint"></div>'
     }
-    canvas.style.width='43vh'
-    canvas.style.height='43vh'
-    canvas.style.gridTemplateColumns='repeat(4,1fr)'
-    canvas.style.gridTemplateRows='repeat(4,1fr)'
-
+    canvas.style.cssText+="width:43vh; height:43vh; grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(4,1fr);"
     pixel = document.querySelectorAll('.pixel-paint')
     paint()
 }
@@ -39,11 +32,7 @@ function size5(){
     for (var i=0; i<25; i++){
         canvas.innerHTML+='<div class="pixel-paint"></div>'
     }
-    canvas.style.width='54vh'
-    canvas.style.height='54vh'
-    canvas.style.gridTemplateColumns='repeat(5,1fr)'
-    canvas.style.gridTemplateRows='repeat(5,1fr)'
-
+    canvas.style.cssText+="width:54vh; height:54vh; grid-template-columns:repeat(5,1fr);grid-template-rows:repeat(5,1fr);"
     pixel = document.querySelectorAll('.pixel-paint')
     paint()
 }
